@@ -10,7 +10,6 @@ from app.services.cnpj_service import query_single_cnpj
 
 router = APIRouter(prefix="/api", tags=["consulta"])
 
-# In-memory store for active jobs (in production can use Redis/DB)
 JOBS: Dict[str, Dict[str, Any]] = {}
 
 async def process_job_background(job_id: str, items: List[Dict[str, str]]):
@@ -27,7 +26,7 @@ async def process_job_background(job_id: str, items: List[Dict[str, str]]):
             results.append(res)
             job["processed"] = idx + 1
             job["results"] = results
-            # Small non-blocking yield for async loop
+           
             await asyncio.sleep(0.01)
 
     job["status"] = "completed"
