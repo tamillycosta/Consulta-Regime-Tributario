@@ -1,4 +1,12 @@
 import os
+import sys
+
+# Dynamically add the parent 'api' directory to sys.path so imports like 'from app...' never fail
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+API_DIR = os.path.dirname(APP_DIR)
+if API_DIR not in sys.path:
+    sys.path.insert(0, API_DIR)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -27,7 +35,7 @@ def startup_event():
 app.include_router(consulta_router)
 
 # Mount React static frontend if built
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+BASE_DIR = os.path.dirname(API_DIR)
 FRONTEND_DIST = os.path.join(BASE_DIR, "frontend", "dist")
 
 if os.path.exists(FRONTEND_DIST):
