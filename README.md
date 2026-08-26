@@ -1,4 +1,4 @@
-# 🏢 Consulta-Regime-Tributario
+# 🏢 Consulta Regime Tributario
 
 Uma aplicação web desenvolvida para automatizar a consulta de informações cadastrais de empresas a partir de uma planilha.
 
