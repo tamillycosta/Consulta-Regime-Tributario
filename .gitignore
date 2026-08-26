@@ -10,7 +10,11 @@ frontend/node_modules/
 frontend/dist/
 
 # SQLite & Data
-backend/data/*.db
+api/data/
+data/
+*.db
+*.sqlite
+*.sqlite3
 *.xlsx
 
 # Environment & OS
