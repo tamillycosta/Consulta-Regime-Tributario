@@ -35,7 +35,6 @@ O arquivo gerado utiliza cores para facilitar a visualização dos resultados:
 A planilha não precisa seguir um modelo rígido. A aplicação identifica automaticamente as colunas referentes ao CNPJ e ao nome da empresa.
 
 ## Projeto
-
-Empresa                    CNPJ
+link :
 Empresa Exemplo Ltda       12.345.678/0001-90
 Empresa Teste Ltda         98.765.432/0001-10
