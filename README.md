@@ -36,5 +36,4 @@ A planilha não precisa seguir um modelo rígido. A aplicação identifica autom
 
 ## Projeto
 link :
-Empresa Exemplo Ltda       12.345.678/0001-90
-Empresa Teste Ltda         98.765.432/0001-10
+
